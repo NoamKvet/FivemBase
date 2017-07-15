@@ -14,28 +14,25 @@ local policeloadout = {
 
 RegisterNetEvent("yt:policeLoadout")
 AddEventHandler("yt:policeLoadout", function()
- RemoveAllPedWeapons(GetPlayerPed(-1))
- local model = GetHashKey("s_m_y_cop_01")
-    RequestModel(model)
-    while not HasModelLoaded(model) do
-        RequestModel(model)
-        Citizen.Wait(0)
-    end
-    SetPlayerModel(PlayerId(), model)
-    SetModelAsNoLongerNeeded(model)
-
-
-local playerPed = GetPlayerPed(-1)
+	RemoveAllPedWeapons(GetPlayerPed(-1))
+	local model = GetHashKey("s_m_y_cop_01")
+	RequestModel(model)
+	while not HasModelLoaded(model) do
+		RequestModel(model)
+		Citizen.Wait(0)
+	end
+	SetPlayerModel(PlayerId(), model)
+	SetModelAsNoLongerNeeded(model)
+	local playerPed = GetPlayerPed(-1)
 	for k,v in ipairs(policeloadout) do
 		Citizen.Trace("Weapon: "..v.i.." "..v.weapon.." Given to ".. playerPed)
-	    GiveWeaponToPed(playerPed, GetHashKey(v.weapon), 9999, true, true)
+		GiveWeaponToPed(playerPed, GetHashKey(v.weapon), 9999, true, true)
 	end
 end)
 
 RegisterNetEvent("yt:PlaceCone")
-AddEventHandler("yt:PlaceCone", function()     
+AddEventHandler("yt:PlaceCone", function() 
 	x, y, z = table.unpack(GetEntityCoords(GetPlayerPed(-1), true))
-    local object = CreateObject("prop_mp_cone_01", x+1, y, z-2, true, true, true)    
-    PlaceObjectOnGroundProperly(object) 
+	local object = CreateObject("prop_mp_cone_01", x+1, y, z-2, true, true, true) 
+	PlaceObjectOnGroundProperly(object) 
 end)
-
