@@ -27,6 +27,9 @@ AddEventHandler('chatMessage', function(source, name, msg)
 	elseif sm[1] == "/dis" then
     CancelEvent()
     TriggerClientEvent('chatMessage', -1, "Police Dispatch | " .. name, { 13, 89, 146 }, string.sub(msg,5))
+	elseif sm[1] == "/me" then
+    CancelEvent()
+    TriggerClientEvent('chatMessage', -1, "Me | " .. name, { 135, 11, 48 }, string.sub(msg,5))
     end
 end)
 
