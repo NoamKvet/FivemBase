@@ -1,6 +1,6 @@
-  -- ActionMenu By @WolfKnight 
-	-- Script By @NoamKvet 
-	-- Thanks @Titch2000 For The Help
+-- ActionMenu By @WolfKnight, 
+Script By @NoamKvet ,
+ Thanks @Titch2000 For The Help -- 
 
 
 Changelog
