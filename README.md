@@ -61,6 +61,3 @@ Dont Forget To Add Suggestions!!
 
 My discord: https://discord.gg/DN3vWhb
 
-Download:
-https://github.com/NoamKvet/FivemBase
-DO NOT REUPLOAD
