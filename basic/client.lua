@@ -106,14 +106,3 @@ end)
 
 
 
-RegisterNetEvent("yt:PlaceCone")
-AddEventHandler("yt:PlaceCone", function()     
-	x, y, z = table.unpack(GetEntityCoords(GetPlayerPed(-1), true))
-    local object = CreateObject("prop_mp_cone_01", x+1, y, z-2, true, true, true)    
-    PlaceObjectOnGroundProperly(object) 
-end)
-
-
-
-
-
