@@ -15,6 +15,9 @@ AddEventHandler('chatMessage', function(source, name, msg)
 	elseif sm[1] == "/911" then
 	CancelEvent()
 	TriggerClientEvent('chatMessage', -1, "911 | " .. name, { 13, 89, 146 }, string.sub(msg,5))
+	elseif sm[1] == "/dis" then
+        CancelEvent()
+        TriggerClientEvent('chatMessage', -1, "Police Dispatch | " .. name, { 13, 89, 146 }, string.sub(msg,5))
 	elseif sm[1] == "/tow" then
 	CancelEvent()
 	TriggerClientEvent('chatMessage', -1, "Tow | " .. name, { 160, 165, 13 }, string.sub(msg,5))
