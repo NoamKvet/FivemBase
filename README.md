@@ -49,6 +49,19 @@ Changed Command
 
     /me - Changed From "Me |" *Player Name*  To "> " * Player Name*.
 
+**-Version 0.3.0-**
+
+Updated Commands
+
+    /ubr - updated to /uber
+    /dis - updated to /dispatch
+    /anc - updated to /announce
+    /twt - updated to /tweet
+
+
+Menu Update
+
+    Whole new menu implemented
 
 Installation:
 Copy the basic folder to your resources and add it to server.cfg
