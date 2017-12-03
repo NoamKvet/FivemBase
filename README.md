@@ -5,10 +5,6 @@
 	-- Thanks @Titch2000 For The Help
 
 
--- ActionMenu By @WolfKnight, 
-Script By @NoamKvet ,
- Thanks @Titch2000 For The Help --
-
  **Changelog**
 
 **-Version 0.1.0-**
