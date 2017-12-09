@@ -1,6 +1,6 @@
 -- [[-----------------------------------------------------------------------
 
-	-- ActionMenu By WolfKnight
+	-- ActionMenu By Darklandz
 	-- Script By Kvetz
 	-- Thanks Titch For The Help!
 
@@ -15,31 +15,31 @@ AddEventHandler('chatMessage', function(source, name, msg)
 	elseif sm[1] == "/911" then
 	CancelEvent()
 	TriggerClientEvent('chatMessage', -1, "911 | " .. name, { 13, 89, 146 }, string.sub(msg,5))
-	elseif sm[1] == "/dis" then
-        CancelEvent()
-        TriggerClientEvent('chatMessage', -1, "Police Dispatch | " .. name, { 13, 89, 146 }, string.sub(msg,5))
+	elseif sm[1] == "/dispatch" then
+    CancelEvent()
+    TriggerClientEvent('chatMessage', -1, "Police Dispatch | " .. name, { 13, 89, 146 }, string.sub(msg,10))
 	elseif sm[1] == "/tow" then
 	CancelEvent()
 	TriggerClientEvent('chatMessage', -1, "Tow | " .. name, { 160, 165, 13 }, string.sub(msg,5))
-	elseif sm[1] == "/twt" then
+	elseif sm[1] == "/tweet" then
 	CancelEvent()
-	TriggerClientEvent('chatMessage', -1, "Twitter | " .. name, { 0, 255, 255 }, string.sub(msg,5))
+	TriggerClientEvent('chatMessage', -1, "Twitter | " .. name, { 0, 255, 255 }, string.sub(msg,7))
 	elseif sm[1] == "/me" then
     CancelEvent()
     TriggerClientEvent('chatMessage', -1, "> " .. name, { 255, 196, 0 }, string.sub(msg,5))
 	elseif sm[1] == "/do" then
     CancelEvent()
     TriggerClientEvent('chatMessage', -1, "< " .. name, { 210, 170, 90 }, string.sub(msg,5))
-	elseif sm[1] == "/anc" then
+	elseif sm[1] == "/announce" then
     CancelEvent()
-	TriggerClientEvent('chatMessage', -1, "Announce | " .. name, { 246, 223, 14 }, string.sub(msg,5))
-	elseif sm[1] == "/ubr" then
+	TriggerClientEvent('chatMessage', -1, "Announce | " .. name, { 246, 223, 14 }, string.sub(msg,10))
+	elseif sm[1] == "/uber" then
     CancelEvent()
-	TriggerClientEvent('chatMessage', -1, "Uber | " .. name, { 14, 161, 246 }, string.sub(msg,5))
+	TriggerClientEvent('chatMessage', -1, "Uber | " .. name, { 14, 161, 246 }, string.sub(msg,6))
 	elseif sm[1] == "/loadout" then
     CancelEvent()
     TriggerClientEvent("ToggleActionmenu", source)
-	TriggerClientEvent("DrawIbuttons", source)
+	
     end
 end)
 
