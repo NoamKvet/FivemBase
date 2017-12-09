@@ -1,6 +1,6 @@
 -- [[-----------------------------------------------------------------------
 
-	-- ActionMenu By WolfKnight
+	-- ActionMenu By Darklandz
 	-- Script By Kvetz
 	-- Thanks Titch For The Help!
 
@@ -13,7 +13,13 @@ ui_page "nui/ui.html"
 
 files {
 	"nui/ui.html",
-	"nui/ui.js", 
+    "nui/background.png",
+    "nui/player.png",
+    "nui/cop.png",
+    "nui/firefighter.png",
+    "nui/medic.png",
+    "nui/close-btn.png",
+   	"nui/ui.js", 
 	"nui/ui.css"
 }
 
