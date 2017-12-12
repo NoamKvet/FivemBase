@@ -1,32 +1,28 @@
 -- [[-----------------------------------------------------------------------
 
-	-- ActionMenu By Darklandz
+	-- ActionMenu By WolfKnight & Darklandz
 	-- Script By Kvetz
 	-- Thanks Titch For The Help!
 
 -- ---------------------------------------------------------------------]]--
 
-local playermenuEnabled = false 
+local menuEnabled = false 
 
 
-RegisterNetEvent("ToggleActionmenu")
-AddEventHandler("ToggleActionmenu", function()
-  openGui()
-end)
-
-
-
-function openGui()
-	SetNuiFocus(true, true)
-  	SendNUIMessage({showPlayerMenu = true})
-end
-
--- Close Gui and disable NUI
-function closeGui()
-	SendNUIMessage({hidePlayerMenu = true})
-	SetNuiFocus(false)
-  	playermenuEnabled = false 
-end
+function ToggleActionMenu()
+	menuEnabled = not menuEnabled
+	if ( menuEnabled ) then 
+		SetNuiFocus( true, true ) 
+		SendNUIMessage({
+			showmenu = true 
+		})
+	else 
+		SetNuiFocus( false )
+		SendNUIMessage({
+			hidemenu = true 
+		})
+	end 
+end 
 
 
 function chatPrint( msg )
@@ -37,7 +33,7 @@ end
 -- NUI Callback Methods
 
 RegisterNUICallback('close', function(data, cb)  
-  closeGui()
+  ToggleActionMenu()
   cb('ok')
 end)
 
@@ -46,7 +42,7 @@ end)
 RegisterNUICallback('civLoad', function(data, cb) 
   	chatPrint( "You are a civilian! go rob some places!" )
 	TriggerEvent("yt:civilian", source)
-  	closeGui()
+  	ToggleActionMenu()
   	cb('ok')
 end)
 
@@ -55,7 +51,7 @@ end)
 RegisterNUICallback('medLoad', function(data, cb)
   chatPrint( "You are a medic!! go save some pepole!" )
   TriggerEvent("yt:medic", source)
-  closeGui()
+  ToggleActionMenu()
   cb('ok')
 end)
 
@@ -64,7 +60,7 @@ end)
 RegisterNUICallback('polLoad', function(data, cb)
   	chatPrint( "You are a cop! go arrest some pepole!" )
 	TriggerEvent("yt:cop", source)
-  	closeGui()
+  	ToggleActionMenu()
   	cb('ok')
 end)
 
@@ -73,7 +69,7 @@ end)
 RegisterNUICallback('fireLoad', function(data, cb)
   	chatPrint( "You are a firefighter! go save some pepole!" )
 	TriggerEvent("yt:firefighter", source)
-  	closeGui()
+  	ToggleActionMenu()
   	cb('ok')
 end)
 

@@ -1,6 +1,6 @@
 -- [[-----------------------------------------------------------------------
 
-	-- ActionMenu By Darklandz
+	-- ActionMenu By WolfKnight
 	-- Script By Kvetz
 	-- Thanks Titch For The Help!
 
