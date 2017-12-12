@@ -1,6 +1,6 @@
 
 
-	-- ActionMenu By @Darklandz
+	-- ActionMenu By WolfKnight & Darklandz
 	-- Script By @NoamKvet 
 	-- Thanks @Titch2000 For The Help
 
