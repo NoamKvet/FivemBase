@@ -22,7 +22,7 @@ function ToggleActionMenu()
 		-- Sends a message to the JavaScript side, telling it to 
 		-- open the menu. 
 		SendNUIMessage({
-			showmenu = true 
+			showPlayerMenu = true 
 		})
 	else 
 		-- Bring the focus back to the game
@@ -31,7 +31,7 @@ function ToggleActionMenu()
 		-- Sends a message to the JavaScript side, telling it to
 		-- close the menu.
 		SendNUIMessage({
-			hidemenu = true 
+			hidesPlayerMenu = true 
 		})
 	end 
 end 
