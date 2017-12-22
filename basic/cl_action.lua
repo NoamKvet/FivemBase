@@ -6,39 +6,28 @@
 
 -- ---------------------------------------------------------------------]]--
 
-local menuEnabled = false 
+local playermenuEnabled = false 
+
 
 RegisterNetEvent("ToggleActionmenu")
 AddEventHandler("ToggleActionmenu", function()
-	ToggleActionMenu()
+  openGui()
 end)
 
-function ToggleActionMenu()
-	-- Make the menuEnabled variable not itself 
-	-- e.g. not true = false, not false = true 
-	menuEnabled = not menuEnabled
 
-	if ( menuEnabled ) then 
-		-- Focuses on the NUI, the second parameter toggles the 
-		-- onscreen mouse cursor. 
-		SetNuiFocus( true, true )
 
-		-- Sends a message to the JavaScript side, telling it to 
-		-- open the menu. 
-		SendNUIMessage({
-			showPlayerMenu = true 
-		})
-	else 
-		-- Bring the focus back to the game
-		SetNuiFocus( false )
+function openGui()
+	SetNuiFocus(true, true)
+  	SendNUIMessage({showPlayerMenu = true})
+end
 
-		-- Sends a message to the JavaScript side, telling it to
-		-- close the menu.
-		SendNUIMessage({
-			hidesPlayerMenu = true 
-		})
-	end 
-end 
+-- Close Gui and disable NUI
+function closeGui()
+	SendNUIMessage({hidePlayerMenu = true})
+	SetNuiFocus(false)
+  	playermenuEnabled = false 
+end
+
 
 
 function chatPrint( msg )
