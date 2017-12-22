@@ -1,33 +1,33 @@
 -- [[-----------------------------------------------------------------------
 
-	-- ActionMenu By WolfKnight & Darklandz
+	-- ActionMenu By WolfKnight
 	-- Script By Kvetz
 	-- Thanks Titch For The Help!
 
 -- ---------------------------------------------------------------------]]--
 
-local playermenuEnabled = false 
-
+local menuEnabled = false 
 
 RegisterNetEvent("ToggleActionmenu")
 AddEventHandler("ToggleActionmenu", function()
-  openGui()
+	ToggleActionMenu()
 end)
 
-
-
-function openGui()
-	SetNuiFocus(true, true)
-  	SendNUIMessage({showPlayerMenu = true})
-end
-
--- Close Gui and disable NUI
-function closeGui()
-	SendNUIMessage({hidePlayerMenu = true})
-	SetNuiFocus(false)
-  	playermenuEnabled = false 
-end
-
+function ToggleActionMenu()
+	Citizen.Trace("LOADOUT")
+	menuEnabled = not menuEnabled
+	if ( menuEnabled ) then 
+		SetNuiFocus( true, true ) 
+		SendNUIMessage({
+			showPlayerMenu = true 
+		})
+	else 
+		SetNuiFocus( false )
+		SendNUIMessage({
+			showPlayerMenu = false
+		})
+	end 
+end 
 
 
 function chatPrint( msg )
