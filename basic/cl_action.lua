@@ -10,28 +10,16 @@ local menuEnabled = false
 
 
 function ToggleActionMenu()
-	-- Make the menuEnabled variable not itself 
-	-- e.g. not true = false, not false = true 
 	menuEnabled = not menuEnabled
-
 	if ( menuEnabled ) then 
-		-- Focuses on the NUI, the second parameter toggles the 
-		-- onscreen mouse cursor. 
-		SetNuiFocus( true, true )
-
-		-- Sends a message to the JavaScript side, telling it to 
-		-- open the menu. 
+		SetNuiFocus( true, true ) 
 		SendNUIMessage({
-			showPlayerMenu = true 
+			showmenu = true 
 		})
 	else 
-		-- Bring the focus back to the game
 		SetNuiFocus( false )
-
-		-- Sends a message to the JavaScript side, telling it to
-		-- close the menu.
 		SendNUIMessage({
-			hidesPlayerMenu = true 
+			hidemenu = true 
 		})
 	end 
 end 
