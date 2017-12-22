@@ -9,10 +9,7 @@ $(document).ready(function(){
         // Show the menu 
         if ( item.showPlayerMenu == true ) {
             $(".playerMenuContainer").css("display", "block");
-        }
-
-        // Hide the menu 
-        if ( item.hidePlayerMenu == true ) {
+        } else if ( item.showPlayerMenu == false ) {// Hide the menu 
             $(".playerMenuContainer").css("display", "none");
         }
     } );
