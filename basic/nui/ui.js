@@ -1,6 +1,11 @@
 
 $(document).ready(function(){
-    
+    // On 'Esc' call close method
+    document.onkeyup = function(data) {
+        if (data.which == 27) {
+            $.post('http://basic/close', JSON.stringify({}));
+        }
+    };
     
     // Listens for NUI messages from Lua 
     window.addEventListener( 'message', function( event ) {
